@@ -13,7 +13,7 @@
   <!-- Bootstrap 3 JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <title>Bootstrap 3 Signup Modal</title>
+  <title>Signup Modal Example</title>
 </head>
 <body>
 
@@ -25,45 +25,49 @@
   </div>
 
   <!-- ✅ Signup Modal -->
-  <div id="signupModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
+  <div id="signupModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
 
-        <!-- Modal Header with Close Icon -->
+        <!-- Modal Header with Title & Close Icon -->
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Create Account</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="signupModalLabel">Create Account</h4>
         </div>
 
-        <!-- Modal Body with Email, Password, Confirm Password -->
+        <!-- Modal Body -->
         <div class="modal-body">
           <form>
+            <!-- Email -->
             <div class="form-group">
-              <label for="signupEmail">Email address:</label>
-              <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required>
-				<p>Your information is safe with us.</p>
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              <small>Your information is safe with us.</small>
             </div>
+
+            <!-- Password -->
             <div class="form-group">
-              <label for="signupPassword">Password:</label>
-              <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required>
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
+
+            <!-- Confirm Password -->
             <div class="form-group">
-              <label for="signupConfirmPassword">Confirm Password:</label>
-              <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm password" required>
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
             </div>
           </form>
         </div>
 
-        <!-- Modal Footer with Submit Button -->
+        <!-- Modal Footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 
       </div>
-
     </div>
   </div>
 
